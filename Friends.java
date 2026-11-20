@@ -4,17 +4,22 @@ import java.util.*;
 
 public class Friends {
 
-   // declare and initialize the ArrayList
-   // declare and initialize the Random class
-   
-   // the constructor
-   public Friends () {
-       // add three names to the ArrayList
-   }
-   
-   public void printRandomFriend(){
-       //return a random Name object from the List
+    // declare and initialize the ArrayList
+    ArrayList<Name> friends = new ArrayList<>();
+    // declare and initialize the Random class
+    Random r = new Random();
+    // the constructor
+    public Friends () {
+        friends.add(new Name("Ian", "Shyu"));
+        friends.add(new Name("Curtis", "Chan"));
+        friends.add(new Name("Issac", "Gao"));
+
     }
    
+    public Name getRandomFriend(){
+        //print out the fullname of a rnadom name in the ArrayList 
+        int x = (int)(Math.random()) * (friends.size());
+        return friends.get(x);
+    }
   
 }
